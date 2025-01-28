@@ -1,0 +1,45 @@
+<div class="form-container">
+  <h3>S'enregistrer</h3>
+  <form (ngSubmit)="register()">
+    <label for="register-username">Username:</label>
+    <input id="register-username" [(ngModel)]="registerData.username" name="register-username" required>
+    
+    <label for="register-email">Email:</label>
+    <input id="register-email" [(ngModel)]="registerData.email" name="register-email" required>
+    
+    <label for="register-password">Password:</label>
+    <input id="register-password" type="password" [(ngModel)]="registerData.password" name="register-password" required>
+    
+    <label for="register-passwordConfirm">Confirm Password:</label>
+    <input id="register-passwordConfirm" type="password" [(ngModel)]="registerData.passwordConfirm" name="register-passwordConfirm" required>
+    
+    <button class="btn" type="submit">S'enregistrer</button>
+  </form>
+</div>
+
+<div class="form-container">
+  <h3>Se connecter</h3>
+  <form (ngSubmit)="login()">
+    <label for="login-username">Username:</label>
+    <input id="login-username" [(ngModel)]="loginData.username" name="login-username" required>
+    
+    <label for="login-password">Password:</label>
+    <input id="login-password" type="password" [(ngModel)]="loginData.password" name="login-password" required>
+    
+    <button class="btn" type="submit">Se connecter</button>
+  </form>
+</div>
+<div class="button-container">
+    <button class="btn" (click)="testPrivate()">Test Privé</button>
+    <button class="btn" (click)="testPublic()">Test Public</button>
+  </div>
+  <br>
+
+<div class="result-container">
+  <h3>Résultat:</h3>
+  <pre>{{ result }}</pre>
+</div>
+
+<div class="button-container">
+  <button class="btn" (click)="logout()">Logout</button>
+</div>
